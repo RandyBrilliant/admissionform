@@ -1,0 +1,263 @@
+{% extends 'regform/base.html' %}
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block title %}IB IT&B | Admission Form 2020{% endblock title %}
+
+{% block customcss %}
+    <link rel="stylesheet" href="{% static 'css/regform/register.css' %}" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.0/dist/css/datepicker.min.css">
+{% endblock customcss %}
+
+{% block content %}
+<!-- Just an image -->
+<nav class="navbar navbar-dark bg-danger">
+  <div class="container">
+    <a class="navbar-brand mx-auto" href="https://www.itnb.ac.id">
+      <img src="{% static 'img/Logo IB IT&B Putih.png' %}" alt="IB IT&B" class="header-logo">
+    </a>
+  </div>
+</nav>
+
+<header class="hero">
+  <img src="{% static 'img/hero-admission.jpg' %}" class="img-fluid" alt="...">
+</header>
+
+
+<main id="main" class="container">
+  <section class="header mt-5">
+    <h1 class="display-5 fw-bolder">Admission Form 2021</h1>
+    <p class="text-muted mb-3">
+      This is the official registration form of Institut Bisnis IT&B for the new student intake who wishes to apply for undergraduate and diploma studies at Institut Bisnis IT&B academic year 2021. Please fill your data accordingly.
+    </p>
+    <hr style="border: 1px solid gray" />
+  </section>
+
+  <form method="post" class="mb-5" novalidate>
+      {% csrf_token %}
+      <section class="personal-information mb-5">
+      <h3 class="bg-danger p-3 text-white fw-bold" style="width: auto;">
+        Personal Information
+      </h3>
+      <p class="text-muted">
+        Field with <span style="color: red">*</span> is required to be filled.
+      </p>
+      <div class="row g-4 mt-1">
+        <div class="col-md-5">
+          {{ form.first_name|attr:"aria-describedby=firstNameHelp"|as_crispy_field }}
+          <div id="firstNameHelp" class="form-text">as stated in your certificate.</div>
+        </div>
+        <div class="col-md-5">
+          {{ form.last_name|as_crispy_field }}
+        </div>
+        <div class="col-md-2">
+          {{ form.gender|add_class:"form-select"|remove_attr:"select"|as_crispy_field }}
+        </div>
+        <div class="col-md-3 col-sm-6">
+          {{ form.date_of_birth|attr:"aria-describedby=dateHelp"|as_crispy_field }}
+          <div id="dateHelp" class="form-text">Date Format: dd/MM/yyyy</div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          {{ form.place_of_birth|as_crispy_field }}
+        </div>
+        <div class="col-md-3 col-sm-6">
+          {{ form.nationality|add_class:"form-select"|remove_attr:"select"|as_crispy_field }}
+        </div>
+        <div class="col-md-3 col-sm-6">
+          {{ form.religion|add_class:"form-select"|remove_attr:"select"|as_crispy_field }}
+        </div>
+        <div class="col-12">
+          {{ form.address|attr:"rows:4"|as_crispy_field }}
+        </div>
+        <div class="col-md-3 col-sm-6">
+          {{ form.district|as_crispy_field }}
+        </div>
+        <div class="col-md-3 col-sm-6">
+          {{ form.postal_code|as_crispy_field }}
+        </div>
+        <div class="col-md-3 col-sm-6">
+          {{ form.city|as_crispy_field }}
+        </div>
+        <div class="col-md-3 col-sm-6">
+          {{ form.province|as_crispy_field }}
+        </div>
+        <div class="col-md-4">
+          {{ form.email|as_crispy_field }}
+        </div>
+        <div class="col-md-3">
+          {{ form.mobile_number|as_crispy_field }}
+        </div>
+        <div class="col-md-3">
+          {{ form.whatsapp_no|as_crispy_field }}
+        </div>
+        <div class="col-md-2">
+          {{ form.line_id|as_crispy_field }}
+        </div>
+      </div>
+    </section>
+      <section class="school-information mb-5">
+      <h3 class="bg-danger p-3 text-white fw-bold" style="width: auto;">
+        Former Education Information
+      </h3>
+      <p class="text-muted">
+        Field with <span style="color: red">*</span> is required to be filled.
+      </p>
+      <div class="row g-4 mt-1">
+        <div class="col-md-6">
+          {{ form.school_name|attr:"aria-describedby=schoolHelp"|as_crispy_field }}
+          <div id="schoolHelp" class="form-text">Former School Name</div>
+        </div>
+        <div class="col-md-6">
+          {{ form.concentration|attr:"aria-describedby=concentrationHelp"|as_crispy_field }}
+          <div id="concentrationHelp" class="form-text">IPA/IPS/Int'/Others</div>
+        </div>
+        <div class="col-md-6">
+          {{ form.school_location|attr:"aria-describedby=schoolLocationHelp"|as_crispy_field }}
+          <div id="schoolLocationHelp" class="form-text">City where the school is located</div>
+        </div>
+        <div class="col-md-6">
+          {{ form.graduation_year|as_crispy_field }}
+        </div>
+      </div>
+    </section>
+      <section class="family-information mb-5">
+      <h3 class="bg-danger p-3 text-white fw-bold" style="width: auto;">
+        Family Information
+      </h3>
+      <p class="text-muted">
+        Field with <span style="color: red">*</span> is required to be filled.
+      </p>
+      <div class="row g-4 mt-1">
+        <div class="col-md-5">
+          {{ form.father_name|as_crispy_field }}
+        </div>
+        <div class="col-md-5">
+          {{ form.father_mobile_number|as_crispy_field }}
+        </div>
+        <div class="col-md-2">
+          {{ form.father_mortality_status|add_class:"form-select"|remove_attr:"select"|as_crispy_field }}
+        </div>
+        <div class="col-12">
+          {{ form.father_address|attr:"rows:4"|as_crispy_field }}
+        </div>
+        <div class="col-md-5">
+          {{ form.mother_name|as_crispy_field }}
+        </div>
+        <div class="col-md-5">
+          {{ form.mother_mobile_number|as_crispy_field }}
+        </div>
+        <div class="col-md-2">
+          {{ form.mother_mortality_status|add_class:"form-select"|remove_attr:"select"|as_crispy_field }}
+        </div>
+        <div class="col-12">
+          {{ form.mother_address|attr:"rows:4"|as_crispy_field }}
+        </div>
+        <div class="col-md-5">
+          {{ form.guardian_name|attr:"aria-describedby=guardianHelp"|as_crispy_field }}
+          <div id="guardianHelp" class="form-text">Optional. Filled only if you are living with your guardian</div>
+        </div>
+        <div class="col-md-5">
+          {{ form.guardian_mobile_number|as_crispy_field }}
+        </div>
+        <div class="col-md-2">
+          {{ form.guardian_mortality_status|add_class:"form-select"|remove_attr:"select"|as_crispy_field }}
+        </div>
+        <div class="col-12">
+          {{ form.guardian_address|attr:"rows:4"|as_crispy_field }}
+        </div>
+      </div>
+    </section>
+      <section class="study-information mb-3">
+      <h3 class="bg-danger p-3 text-white fw-bold" style="width: auto;">
+        Study Information
+      </h3>
+      <p class="text-muted">
+        Field with <span style="color: red">*</span> is required to be filled.
+      </p>
+      <div class="row g-4 mt-1">
+        <div class="col-md-6">
+          {{ form.study_program|add_class:"form-select"|remove_attr:"select"|as_crispy_field }}
+        </div>
+        <div class="col-md-6">
+          {{ form.schedule|attr:"aria-describedby=scheduleHelp"|add_class:"form-select"|remove_attr:"select"|as_crispy_field }}
+          <div id="scheduleHelp" class="form-text">Evening class is only available to Management, Accounting and Entrepreneurship.</div>
+        </div>
+      </div>
+
+    </section>
+
+      <div class="d-grid gap-2 col-md-4 mx-auto mt-3">
+      <button type="button" class="btn btn-danger btn-lg mt-3 text-uppercase fw-bold btn-rounded" data-bs-toggle="modal" data-bs-target="#studentDeclaration">
+        Continue
+      </button>
+    </div>
+      <div class="modal fade" id="studentDeclaration" tabindex="-1" aria-labelledby="StudentDeclaration" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="AdmissionDeclaration">Admission Declaration</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ol>
+              <li>I declare that I have understood all information, including the requirements for admission.</li>
+              <li>I declare that the information provided by me in connection with this admission is true and complete.</li>
+              <li>I understand that <abbr title="Institut Bisnis Informasi Teknologi dan Bisnis" class="initialism">IB IT&B</abbr> reserves the right to vary or reverse any decisions regarding admission or enrolment made on the basis of incorrect or incomplete information provided by me and that any such act on my part will be placed on record and will form part of confidential information forwarded to administrators in assessing any subsequent application.</li>
+              <li>I agree to obey the statutes, regulations and rules of <abbr title="Institut Bisnis Informasi Teknologi dan Bisnis" class="initialism">IB IT&B</abbr> as far as they apply to me. I declare that the information I have submitted with this application is a true and complete record of all academic results I have achieved at educational institution which I have attended and I acknowledge that my failure to disclose my true and complete academic record, the provision incorrect information or withholding of relevant information, may result in the cancellation of my enrolment at any stage, and action may be recorded on my student file. I will inform <abbr title="Institut Bisnis Informasi Teknologi dan Bisnis" class="initialism">IB IT&B</abbr> immediately of any changes to my contact details.</li>
+              <li>I understand that <abbr title="Institut Bisnis Informasi Teknologi dan Bisnis" class="initialism">IB IT&B</abbr> authority who collects the information on this form is to allow <abbr title="Institut Bisnis Informasi Teknologi dan Bisnis" class="initialism">IB IT&B</abbr> to properly administer its course programmes, that the information may be shared for those purposes between <abbr title="Institut Bisnis Informasi Teknologi dan Bisnis" class="initialism">IB IT&B</abbr> and the Kementerian Pendidikan dan Kebudayaan, information collected may be disclosed without my consent only as authorized or required by the Act or another law. </li>
+              <li> I understand that the maximum duration of Strata 1 (S-1) and Diploma 4 (D-4) study program is 7 (seven) years counted from the beginning intake year as required by <strong><em>(Permendikbud No 3 Tahun 2020 tentang Standar Nasional Pendidikan Tinggi Pasal 17 Ayat 1.d)</strong></em>.</li>
+              <li> I understand that all fees paid shall be <strong class="text-uppercase">non-refundable and non-transferable</strong> UNLESS;
+                  <br />- Failed on SMA National Examination
+                  <br />- Accepted to Indonesian Government University
+                  <br /><abbr title="Institut Bisnis Informasi Teknologi dan Bisnis" class="initialism">IB IT&B</abbr> will refund the Registration Fee if students are having such kind of one of the two points
+                  mentioned above.
+              </li>
+          </ol>
+            <hr />
+            <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    I have read all of the statements above and agree with all the declaration that have been made to me.
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</main>
+
+<footer class="footer mt-auto py-2 bg-dark">
+  <div class="container">
+    <p class="text-muted text-center mt-2" style="font-size: 12px">© 2020 Copyright to Institut Bisnis IT&B | All Right Reserved</p>
+  </div>
+</footer>
+{% endblock content %}
+
+{% block customjs %}
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.0/dist/js/datepicker-full.min.js"></script>
+    <script>
+        const elem = document.querySelector('input[name="date_of_birth"]');
+        const datepicker = new Datepicker(elem, {
+      // ...options
+        });
+        const selectValue = document.querySelectorAll('.form-select');
+
+        for (var i=0; i<selectValue.length; i++) {
+            selectValue[i].options[0].innerText = "Select one from the option below";
+
+        }
+    </script>
+{% endblock customjs %}
+
+

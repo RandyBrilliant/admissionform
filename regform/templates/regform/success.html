@@ -1,0 +1,92 @@
+{% extends 'regform/base.html' %}
+{% load static %}
+
+{% block title %}IB IT&B | Admission Successful{% endblock title %}
+
+{% block customcss %}
+    <link rel="stylesheet" href="{% static 'css/regform/register.css' %}" type="text/css" />
+{% endblock customcss %}
+
+{% block content %}
+    <header>
+        <nav class="navbar navbar-dark bg-danger">
+      <div class="container">
+        <a class="navbar-brand mx-auto" href="https://www.itnb.ac.id">
+          <img src="{% static 'img/Logo IB IT&B Putih.png' %}" alt="IB IT&B" class="header-logo">
+        </a>
+      </div>
+    </nav>
+    </header>
+    <main>
+        <div class="alert alert-success container mt-5" role="alert">
+          <h4 class="alert-heading fw-bold">Congratulations!</h4>
+          <p>You are one step ahead to be one of our future students! we will review your application form shortly. In the meantime,
+              please contact one of our Education Consultant Staff to seek for further instructions. In 3 days time, you will receive
+              <strong>Letter of Acceptance (LOA)</strong> which stated that you have been accepted as one of our students. Thank you for applying
+               to IB IT&B.
+          </p>
+          <hr>
+          <figure class="text-center">
+              <blockquote class="blockquote">
+                <p>Education is the most powerful weapon which you can use to change the world</p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                the one and only <cite title="Source Title">Nelson Mandela</cite>
+              </figcaption>
+          </figure>
+        </div>
+
+        <div class="container mt-5">
+            <div class="title-contact text-center">
+                <h2 class="fw-bold">Contact Us</h2>
+                <hr style="width: 10%; margin: 10px auto 20px auto; border: 2px solid black">
+                <p class="text-muted mb-5">You can refer to the contact below, our Education Consultant Staff will assist you in your admission pathway.</p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card mb-3">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="..." alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              <div class="col">
+                <div class="card mx-3">
+                  <div class="row g-0">
+                    <div class="col-md-5">
+                      <img src="{%  static 'img/card-avatar.jpg' %}" alt="..." class="rounded float-start">
+                    </div>
+                    <div class="col-md-7">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock content %}
