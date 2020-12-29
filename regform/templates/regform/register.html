@@ -6,23 +6,25 @@
 {% block title %}IB IT&B | Admission Form 2020{% endblock title %}
 
 {% block customcss %}
+    <!-- Google Fonts Kumbh -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="{% static 'css/regform/register.css' %}" type="text/css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.0/dist/css/datepicker.min.css">
+    <style>
+      * {
+        font-family: "Kumbh Sans", sans-serif;
+      }
+    </style>
 {% endblock customcss %}
 
 {% block content %}
-<!-- Just an image -->
-<nav class="navbar navbar-dark bg-danger">
-  <div class="container">
-    <a class="navbar-brand mx-auto" href="https://www.itnb.ac.id">
-      <img src="{% static 'img/Logo IB IT&B Putih.png' %}" alt="IB IT&B" class="header-logo">
-    </a>
-  </div>
-</nav>
-
-<header class="hero">
+<section class="hero">
   <img src="{% static 'img/hero-admission.jpg' %}" class="img-fluid" alt="...">
-</header>
+</section>
 
 
 <main id="main" class="container">
@@ -236,12 +238,6 @@
     </div>
   </form>
 </main>
-
-<footer class="footer mt-auto py-2 bg-dark">
-  <div class="container">
-    <p class="text-muted text-center mt-2" style="font-size: 12px">© 2020 Copyright to Institut Bisnis IT&B | All Right Reserved</p>
-  </div>
-</footer>
 {% endblock content %}
 
 {% block customjs %}

@@ -9,34 +9,11 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet"
     />
-    <link href="{% static 'css/icofont/icofont.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/boxicons/css/boxicons.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/remixicon/remixicon.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/animate.css/animate.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'css/aos/aos.css' %}" rel="stylesheet" />
-
     <!-- Custom CSS -->
     <link href="{% static 'css/home/style.css' %}" rel="stylesheet" />
 {% endblock customcss %}
 
 {% block content %}
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
-      <nav class="navbar navbar-light bg-danger fixed-top">
-        <div class="container-fluid position-relative">
-          <a class="navbar-brand mx-auto py-2" href="https://www.itnb.ac.id">
-            <img
-              src="{% static 'img/logo.svg' %}"
-              alt="IB IT&B Logo"
-              width="130"
-              class="img-fluid"
-            />
-          </a>
-        </div>
-      </nav>
-    </header>
-    <!-- End Header -->
-
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex justify-content-center align-items-center">
       <div
@@ -48,15 +25,311 @@
         <p class="h4 text-white mt-3">
           The industries are waiting for you, embark on your journey now.
         </p>
-        <a href="courses.html" class="btn btn-outline-danger mt-3 btn-enroll">
+        <a href="{% url 'register-page' %}" class="btn btn-outline-danger mt-3 btn-enroll">
           Enroll Now
         </a>
       </div>
     </section>
     <!-- End Hero -->
 
+    <!-- Main Section -->
     <main id="main">
-      <!-- ======= About Section ======= -->
+      <!-- ======= Study Program Section ======= -->
+      <section id="study-program" class="courses">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Major</h2>
+            <h3>Our Study Program</h3>
+          </div>
+
+          <div class="row g-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="course-item shadow">
+                <img
+                  src="{% static 'img/home/accounting.jpg' %}"
+                  class="img-fluid"
+                  alt="A girl reading book in class"
+                />
+                <div class="course-content">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h4>Business</h4>
+                  </div>
+
+                  <h3><a href="https://www.itnb.ac.id/about-us/accounting" target="_blank">Accounting</a></h3>
+                  <p>
+                    Accounting opens countless employment in the business world.
+                    In a broad sense, Accounting makes senses of numbers which
+                    is an important part of any successful business...
+                  </p>
+                  <div
+                    class="trainer d-flex justify-content-center align-items-center"
+                  >
+                    <a
+                      href="https://www.itnb.ac.id/about-us/accounting"
+                      class="btn btn-danger mt-3 btn-enroll"
+                      target="_blank"
+                    >
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="course-item shadow">
+                <img
+                  src="{% static 'img/home/management.jpg' %}"
+                  class="img-fluid"
+                  alt="A man presenting his idea in class"
+                />
+                <div class="course-content">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h4>Business</h4>
+                  </div>
+
+                  <h3><a href="https://www.itnb.ac.id/about-us/management" target="_blank">Management</a></h3>
+                  <p>
+                    The Management Study Program provides a comprehensive basis
+                    for a career in management while being flexible enough to
+                    let you pursue areas that particularly interest you...
+                  </p>
+                  <div
+                    class="trainer d-flex justify-content-center align-items-center"
+                  >
+                    <a
+                      href="https://www.itnb.ac.id/about-us/management"
+                      class="btn btn-danger mt-3 btn-enroll"
+                      target="_blank"
+                    >
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="course-item shadow">
+                <img
+                  src="{% static 'img/home/entrepreneurship.jpg' %}"
+                  class="img-fluid"
+                  alt="A man going to college"
+                />
+                <div class="course-content">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h4>Business</h4>
+                  </div>
+
+                  <h3><a href="https://www.itnb.ac.id/about-us/entrepreneurship" target="_blank">Entrepreneurship</a></h3>
+                  <p>
+                    Entrepreneurs are not afraid to take risks, tackle
+                    innovative solutions in order to boost their business
+                    performance and ensure the highest income. Entrepreneurship
+                    concentrates on business...
+                  </p>
+                  <div
+                    class="trainer d-flex justify-content-center align-items-center"
+                  >
+                    <a
+                      href="https://www.itnb.ac.id/about-us/entrepreneurship"
+                      class="btn btn-danger mt-3 btn-enroll"
+                      target="_blank"
+                    >
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="course-item shadow">
+                <img
+                  src="{% static 'img/home/international-trade.jpg' %}"
+                  class="img-fluid"
+                  alt="A girl sitting in library reading book"
+                />
+                <div class="course-content">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h4>Business</h4>
+                  </div>
+
+                  <h3><a href="https://www.itnb.ac.id/about-us/international-trade" target="_blank">International Trade</a></h3>
+                  <p>
+                    This program will analyze the causes and consequences of
+                    international trade and investment. The program was built to
+                    understand and investigate why nations trade, what they
+                    trade...
+                  </p>
+
+                  <div
+                    class="trainer d-flex justify-content-center align-items-center"
+                  >
+                    <a
+                      href="https://www.itnb.ac.id/about-us/international-trade"
+                      class="btn btn-danger mt-3 btn-enroll"
+                      target="_blank"
+                    >
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="course-item shadow">
+                <img
+                  src="{% static 'img/home/information-system.jpg' %}"
+                  class="img-fluid"
+                  alt="Two men solving programming problems"
+                />
+                <div class="course-content">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h4>Technology</h4>
+                  </div>
+
+                  <h3><a href="https://www.itnb.ac.id/about-us/information-system" target="_blank">Information System</a></h3>
+                  <p>
+                    Information Systems Study program teaches the foundation of
+                    science and application of Information Technology within an
+                    organization. The curriculum of Information Systems Study
+                    Program is unique...
+                  </p>
+                  <div
+                    class="trainer d-flex justify-content-center align-items-center"
+                  >
+                    <a
+                      href="https://www.itnb.ac.id/about-us/information-system"
+                      class="btn btn-danger mt-3 btn-enroll"
+                      target="_blank"
+                    >
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="course-item shadow">
+                <img
+                  src="{% static 'img/home/hospitality-management.jpg' %}"
+                  class="img-fluid"
+                  alt="A girl is cutting onion in kitchen"
+                />
+                <div class="course-content">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <h4>Hotel Management</h4>
+                  </div>
+
+                  <h3>
+                    <a href="https://www.itnb.ac.id/about-us/hospitality-management" target="_blank">Hospitality Management</a>
+                  </h3>
+                  <p>
+                    Our Hospitality Management program is an international
+                    hospitality and tourism program based on the curricula used
+                    in Australia and Singapore. It is addressed at students who
+                    want to pursue a career in...
+                  </p>
+                  <div
+                    class="trainer d-flex justify-content-center align-items-center"
+                  >
+                    <a
+                      href="https://www.itnb.ac.id/about-us/hospitality-management"
+                      class="btn btn-danger mt-3 btn-enroll"
+                      target="_blank"
+                    >
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Study Program Section -->
+
+      <!-- ======= Why Us Section ======= -->
+      <section id="why-us" class="why-us">
+        <div class="container" data-aos="fade-up">
+          <div class="row">
+            <div class="col-lg-4 d-flex align-items-stretch">
+              <div class="content bg-danger shadow">
+                <h3>Why Studying at IB IT&B?</h3>
+                <p>
+                  There are a lot of opportunities that you will achieve by
+                  studying at IB IT&B. We have been trusted by parents and
+                  students for 10 years in giving the best education to them.
+                </p>
+                <div class="text-center">
+                  <a href="https://www.itnb.ac.id" class="more-btn" target="_blank"
+                    >Learn More <i class="bx bx-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-8 d-flex align-items-stretch"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div class="icon-boxes d-flex flex-column justify-content-center">
+                <div class="row">
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0 shadow">
+                      <i class="bx bx-receipt"></i>
+                      <h4>Cultural Study Tour</h4>
+                      <p>
+                        Earn your free study tour trip to Kuala Lumpur for free.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0 shadow">
+                      <i class="bx bx-cube-alt"></i>
+                      <h4>Certification Profession</h4>
+                      <p>
+                        We are working together with the government to provide
+                        you with the professional certification to level up your
+                        career.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0 shadow">
+                      <i class="bx bx-images"></i>
+                      <h4>English-Speaking Environment</h4>
+                      <p>
+                        At here, we aim to guide you in an English-Speaking
+                        Environment in order to strengthn your english fluency.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End .content-->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Why Us Section -->
+
+      <!-- ======= Admission Pathway Section ======= -->
       <section id="admission-pathway" class="about">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
@@ -71,7 +344,7 @@
               data-aos-delay="100"
             >
               <img
-                src="assets/img/photo-1.jpg"
+                src="{% static 'img/home/students-in-class.jpg' %}"
                 class="img-fluid"
                 alt="IB IT&B Students in class"
               />
@@ -109,21 +382,22 @@
                 For more detailed procedure, please contact one of our Education
                 Consultant Staff for further instruction
               </p>
-              <a href="courses.html" class="btn btn-danger mt-3 btn-enroll">
+              <a href="{% url 'register-page' %}" class="btn btn-danger mt-3 btn-enroll">
                 Enroll Now
               </a>
             </div>
           </div>
         </div>
       </section>
+      <!-- End Admission Pathway  Section -->
 
+      <!-- ======= Entry Requirement Section ======= -->
       <section id="data-entry" class="about">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
             <h2>Requirement</h2>
             <h3>Data Entry Requirement</h3>
           </div>
-
           <div class="row">
             <div
               class="col-lg-6 order-1 order-lg-1"
@@ -131,14 +405,14 @@
               data-aos-delay="100"
             >
               <img
-                src="assets/img/photo-2.jpg"
+                src="{% static 'img/home/students-in-library.jpg' %}"
                 class="img-fluid"
                 alt="Two girls in library"
               />
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-2 content">
               <p class="fst-italic">
-                The document that is needed to be submitted :
+                The document that is needed to be submitted:
               </p>
               <ul>
                 <li>
@@ -195,454 +469,126 @@
           </div>
         </div>
       </section>
-      <!-- End About Section -->
+      <!-- End Entry Requirement Section -->
 
-      <!-- ======= Why Us Section ======= -->
-      <section id="why-us" class="why-us">
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-            <div class="col-lg-4 d-flex align-items-stretch">
-              <div class="content bg-danger shadow">
-                <h3>Why Studying at IB IT&B?</h3>
-                <p>
-                  There are a lot of opportunities that you will achieve by
-                  studying at IB IT&B. We have been trusted by parents and
-                  students for 10 years in giving the best education to them.
-                </p>
-                <div class="text-center">
-                  <a href="about.html" class="more-btn"
-                    >Learn More <i class="bx bx-chevron-right"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-lg-8 d-flex align-items-stretch"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div class="icon-boxes d-flex flex-column justify-content-center">
-                <div class="row">
-                  <div class="col-xl-4 d-flex align-items-stretch">
-                    <div class="icon-box mt-4 mt-xl-0 shadow">
-                      <i class="bx bx-receipt"></i>
-                      <h4>Cultural Study Tour</h4>
-                      <p>
-                        Earn your free study tour trip to Kuala Lumpur for free.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-xl-4 d-flex align-items-stretch">
-                    <div class="icon-box mt-4 mt-xl-0 shadow">
-                      <i class="bx bx-cube-alt"></i>
-                      <h4>Certification Profession</h4>
-                      <p>
-                        We are working together with the government to provide
-                        you with the professional certification to level up your
-                        career.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-xl-4 d-flex align-items-stretch">
-                    <div class="icon-box mt-4 mt-xl-0 shadow">
-                      <i class="bx bx-images"></i>
-                      <h4>English-Speaking Environment</h4>
-                      <p>
-                        At here, we aim to guide you in an English-Speaking
-                        Environment in order to strengthn your english fluency.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End .content-->
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Why Us Section -->
-
-      <!-- ======= Features Section ======= -->
-      <!-- <section id="features" class="features">
-        <div class="container" data-aos="fade-up">
-          <div class="row" data-aos="zoom-in" data-aos-delay="100">
-            <div class="col-lg-3 col-md-4">
-              <div class="icon-box">
-                <i class="ri-store-line" style="color: #ffbb2c"></i>
-                <h3><a href="">Lorem Ipsum</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-              <div class="icon-box">
-                <i class="ri-bar-chart-box-line" style="color: #5578ff"></i>
-                <h3><a href="">Dolor Sitema</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-              <div class="icon-box">
-                <i class="ri-calendar-todo-line" style="color: #e80368"></i>
-                <h3><a href="">Sed perspiciatis</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-              <div class="icon-box">
-                <i class="ri-paint-brush-line" style="color: #e361ff"></i>
-                <h3><a href="">Magni Dolores</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box">
-                <i class="ri-database-2-line" style="color: #47aeff"></i>
-                <h3><a href="">Nemo Enim</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box">
-                <i class="ri-gradienter-line" style="color: #ffa76e"></i>
-                <h3><a href="">Eiusmod Tempor</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box">
-                <i class="ri-file-list-3-line" style="color: #11dbcf"></i>
-                <h3><a href="">Midela Teren</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box">
-                <i class="ri-price-tag-2-line" style="color: #4233ff"></i>
-                <h3><a href="">Pira Neve</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box">
-                <i class="ri-anchor-line" style="color: #b2904f"></i>
-                <h3><a href="">Dirada Pack</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box">
-                <i class="ri-disc-line" style="color: #b20969"></i>
-                <h3><a href="">Moton Ideal</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box">
-                <i class="ri-base-station-line" style="color: #ff5828"></i>
-                <h3><a href="">Verdo Park</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box">
-                <i class="ri-fingerprint-line" style="color: #29cc61"></i>
-                <h3><a href="">Flavor Nivelanda</a></h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- End Features Section -->
-
-      <!-- ======= Popular Courses Section ======= -->
-      <section id="popular-courses" class="courses">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Major</h2>
-            <h3>Our Study Program</h3>
-          </div>
-
-          <div class="row g-5" data-aos="zoom-in" data-aos-delay="100">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="course-item shadow">
-                <img
-                  src="assets/img/course-1.jpg"
-                  class="img-fluid"
-                  alt="..."
-                />
-                <div class="course-content">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-3"
-                  >
-                    <h4>Business</h4>
-                  </div>
-
-                  <h3><a href="course-details.html">Accounting</a></h3>
-                  <p>
-                    Accounting opens countless employment in the business world.
-                    In a broad sense, Accounting makes senses of numbers which
-                    is an important part of any successful business...
-                  </p>
-                  <div
-                    class="trainer d-flex justify-content-center align-items-center"
-                  >
-                    <a
-                      href="courses.html"
-                      class="btn btn-danger mt-3 btn-enroll"
-                    >
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="course-item shadow">
-                <img
-                  src="assets/img/course-1.jpg"
-                  class="img-fluid"
-                  alt="..."
-                />
-                <div class="course-content">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-3"
-                  >
-                    <h4>Business</h4>
-                  </div>
-
-                  <h3><a href="course-details.html">Management</a></h3>
-                  <p>
-                    The Management Study Program provides a comprehensive basis
-                    for a career in management while being flexible enough to
-                    let you pursue areas that particularly interest you...
-                  </p>
-                  <div
-                    class="trainer d-flex justify-content-center align-items-center"
-                  >
-                    <a
-                      href="courses.html"
-                      class="btn btn-danger mt-3 btn-enroll"
-                    >
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="course-item shadow">
-                <img
-                  src="assets/img/course-1.jpg"
-                  class="img-fluid"
-                  alt="..."
-                />
-                <div class="course-content">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-3"
-                  >
-                    <h4>Business</h4>
-                  </div>
-
-                  <h3><a href="course-details.html">Entrepreneurship</a></h3>
-                  <p>
-                    Entrepreneurs are not afraid to take risks, tackle
-                    innovative solutions in order to boost their business
-                    performance and ensure the highest income. Entrepreneurship
-                    concentrates on business...
-                  </p>
-                  <div
-                    class="trainer d-flex justify-content-center align-items-center"
-                  >
-                    <a
-                      href="courses.html"
-                      class="btn btn-danger mt-3 btn-enroll"
-                    >
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="course-item shadow">
-                <img
-                  src="assets/img/course-1.jpg"
-                  class="img-fluid"
-                  alt="..."
-                />
-                <div class="course-content">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-3"
-                  >
-                    <h4>Business</h4>
-                  </div>
-
-                  <h3><a href="course-details.html">International Trade</a></h3>
-                  <p>
-                    This program will analyze the causes and consequences of
-                    international trade and investment. The program was built to
-                    understand and investigate why nations trade, what they
-                    trade...
-                  </p>
-
-                  <div
-                    class="trainer d-flex justify-content-center align-items-center"
-                  >
-                    <a
-                      href="courses.html"
-                      class="btn btn-danger mt-3 btn-enroll"
-                    >
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="course-item shadow">
-                <img
-                  src="assets/img/course-1.jpg"
-                  class="img-fluid"
-                  alt="..."
-                />
-                <div class="course-content">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-3"
-                  >
-                    <h4>Technology</h4>
-                  </div>
-
-                  <h3><a href="course-details.html">Information System</a></h3>
-                  <p>
-                    Information Systems Study program teaches the foundation of
-                    science and application of Information Technology within an
-                    organization. The curriculum of Information Systems Study
-                    Program is unique...
-                  </p>
-                  <div
-                    class="trainer d-flex justify-content-center align-items-center"
-                  >
-                    <a
-                      href="courses.html"
-                      class="btn btn-danger mt-3 btn-enroll"
-                    >
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="course-item shadow">
-                <img
-                  src="assets/img/course-1.jpg"
-                  class="img-fluid"
-                  alt="..."
-                />
-                <div class="course-content">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-3"
-                  >
-                    <h4>Hotel Management</h4>
-                  </div>
-
-                  <h3>
-                    <a href="course-details.html">Hospitality Management</a>
-                  </h3>
-                  <p>
-                    Our Hospitality Management program is an international
-                    hospitality and tourism program based on the curricula used
-                    in Australia and Singapore. It is addressed at students who
-                    want to pursue a career in...
-                  </p>
-                  <div
-                    class="trainer d-flex justify-content-center align-items-center"
-                  >
-                    <a
-                      href="courses.html"
-                      class="btn btn-danger mt-3 btn-enroll"
-                    >
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Popular Courses Section -->
-
-      <!-- ======= Trainers Section ======= -->
+      <!-- ======= Education Consultant Staff Section ======= -->
       <section id="trainers" class="trainers">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
-            <h2>Trainers</h2>
-            <p>Our Professional Trainers</p>
+            <h2>Education Consultant</h2>
+            <h3>Our Education Consultant Staff</p>
           </div>
 
           <div class="row" data-aos="zoom-in" data-aos-delay="100">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="member">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member shadow">
                 <img
-                  src="assets/img/trainers/trainer-1.jpg"
+                  src="{% static 'img/home/valentina.jpg' %}"
                   class="img-fluid"
-                  alt=""
+                  alt="Randy Brilliant"
                 />
                 <div class="member-content">
-                  <h4>Walter White</h4>
-                  <span>Web Development</span>
+                  <h4>Randy Brilliant</h4>
+                  <span>Information System 2018</span>
                   <p>
                     Magni qui quod omnis unde et eos fuga et exercitationem.
                     Odio veritatis perspiciatis quaerat qui aut aut aut
                   </p>
                   <div class="social">
-                    <a href=""><i class="icofont-twitter"></i></a>
-                    <a href=""><i class="icofont-facebook"></i></a>
-                    <a href=""><i class="icofont-instagram"></i></a>
-                    <a href=""><i class="icofont-linkedin"></i></a>
+                    <a href="http://line.me/ti/p/~randycb" target="_blank">
+                      <i class="icofont-line"></i>
+                    </a>
+                    <a href="https://www.instagram.com/randybrilliant" target="_blank">
+                      <i class="icofont-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/6288261306403" target="_blank">
+                      <i class="icofont-whatsapp"></i>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="member">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member shadow">
                 <img
-                  src="assets/img/trainers/trainer-2.jpg"
+                  src="{% static 'img/home/valentina.jpg' %}"
                   class="img-fluid"
-                  alt=""
+                  alt="Valentina"
                 />
                 <div class="member-content">
-                  <h4>Sarah Jhinson</h4>
-                  <span>Marketing</span>
+                  <h4>Valentina</h4>
+                  <span>Information System 2019</span>
                   <p>
-                    Repellat fugiat adipisci nemo illum nesciunt voluptas
-                    repellendus. In architecto rerum rerum temporibus
+                    Don't limit yourself. Many people limit themselves to what they think they can do. You can go as far as your mine let's you. What you believe,remember,you can achieve.
                   </p>
                   <div class="social">
-                    <a href=""><i class="icofont-twitter"></i></a>
-                    <a href=""><i class="icofont-facebook"></i></a>
-                    <a href=""><i class="icofont-instagram"></i></a>
-                    <a href=""><i class="icofont-linkedin"></i></a>
+                    <a href="http://line.me/ti/p/~valentinaali72" target="_blank">
+                      <i class="icofont-line"></i>
+                    </a>
+                    <a href="https://www.instagram.com/va_rene01" target="_blank">
+                      <i class="icofont-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/6281397735730" target="_blank">
+                      <i class="icofont-whatsapp"></i>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="member">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member shadow">
                 <img
-                  src="assets/img/trainers/trainer-3.jpg"
+                  src="{% static 'img/home/vanessa.jpg' %}"
                   class="img-fluid"
-                  alt=""
+                  alt="Vanesha Vionelli"
                 />
                 <div class="member-content">
-                  <h4>William Anderson</h4>
-                  <span>Content</span>
+                  <h4>Vanesha Vionelli</h4>
+                  <span>Entrepreneurship 2020</span>
+                  <p>
+                    One Day or Day One, you decide.
+                  </p>
+                  <div class="social">
+                    <a href="http://line.me/ti/p/~neshaaaa" target="_blank">
+                      <i class="icofont-line"></i>
+                    </a>
+                    <a href="https://www.instagram.com/vaneshavionelli" target="_blank">
+                      <i class="icofont-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/6281321954878" target="_blank">
+                      <i class="icofont-whatsapp"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member shadow">
+                <img
+                  src="{% static 'img/home/jeffry.jpg' %}"
+                  class="img-fluid"
+                  alt="Jeffry Gunawan"
+                />
+                <div class="member-content">
+                  <h4>Jeffry Gunawan</h4>
+                  <span>Entrepreneurship 2020</span>
                   <p>
                     Voluptas necessitatibus occaecati quia. Earum totam
                     consequuntur qui porro et laborum toro des clara
                   </p>
                   <div class="social">
-                    <a href=""><i class="icofont-twitter"></i></a>
-                    <a href=""><i class="icofont-facebook"></i></a>
-                    <a href=""><i class="icofont-instagram"></i></a>
-                    <a href=""><i class="icofont-linkedin"></i></a>
+                    <a href="http://line.me/ti/p/~neshaaaa" target="_blank">
+                      <i class="icofont-line"></i>
+                    </a>
+                    <a href="https://www.instagram.com/vaneshavionelli" target="_blank">
+                      <i class="icofont-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/6281321954878" target="_blank">
+                      <i class="icofont-whatsapp"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -650,100 +596,12 @@
           </div>
         </div>
       </section>
-      <!-- End Trainers Section -->
+      <!-- End Education Consultant Staff Section -->
     </main>
-    <!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h3>Admission Office</h3>
-              <p>
-                Education Consultant Office <br />
-                3rd Floor of IB IT&B Main Building <br />
-                16 Mahoni St.<br />
-                Medan Timur, North Sumatra 20235<br />
-                Indonesia<br /><br />
-                <strong>Phone:</strong> +62 61 453 0505</button><br />
-                <strong>Email:</strong> educonsultant@itnb.ac.id<br />
-              </p>
-            </div>
-
-            <div class="col-lg-2 col-md-6 footer-links">
-              <h4>Main Websites</h4>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">Home</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Our Study Program</h4>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Accouting</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Entrepreneurship</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Hospitality Management</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Information System</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">International Trade</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Management</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container d-md-flex py-3">
-        <div class="me-md-auto text-center text-md-start">
-          <div class="copyright">
-            &copy; Copyright <strong><span>IB IT&B</span></strong
-            >. All Rights Reserved
-          </div>
-        </div>
-        <div class="social-links text-center text-md-right pt-3 pt-md-0">
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-whatsapp"></i></a>
-        </div>
-      </div>
-    </footer>
-    <!-- End Footer -->
-
-    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+    <!-- End Main Section -->
 {% endblock content %}
 
 {% block customjs %}
-    <!-- Vendor JS Files -->
-    <script src="{% static 'css/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'css/jquery.easing/jquery.easing.min.js' %}"></script>
-    <script src="{% static 'css/waypoints/jquery.waypoints.min.js' %}"></script>
-    <script src="{% static 'css/counterup/counterup.min.js' %}"></script>
-    <script src="{% static 'css/aos/aos.js' %}"></script>
-
     <!-- Custom JS -->
     <script src="{% static 'js/home/main.js' %}"></script>
 {% endblock customjs %}

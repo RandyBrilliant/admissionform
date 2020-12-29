@@ -28,31 +28,31 @@
 
     <title>{% block title %}{% endblock title %}</title>
 
-    <!-- Google Fonts Kumbh -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}" type="text/css" />
-
-    <style>
-      * {
-        font-family: "Kumbh Sans", sans-serif;
-      }
-    </style>
+    <link href="{% static 'css/home/base.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/icofont/icofont.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/boxicons/css/boxicons.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/remixicon/remixicon.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/animate.css/animate.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/aos/aos.css' %}" rel="stylesheet" />
 
     {% block customcss %}
     {% endblock customcss %}
-
   </head>
   <body>
+    {% include 'regform/navbar.html' %}
+
     {% block content %}{% endblock content %}
 
+    {% include 'regform/footer.html' %}
 
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
     <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script src="{% static 'js/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/waypoints/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'js/aos/aos.js' %}"></script>
     {% block customjs %}
     {% endblock customjs %}
   </body>
