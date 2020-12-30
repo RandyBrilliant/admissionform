@@ -58,6 +58,13 @@ class StudentData(models.Model):
         (NIGHT, "Evening (07.00 PM)"),
     ]
 
+    NATIONAL = "NDP"
+    JOINT = "JDP"
+    GRADUATION = [
+        (NATIONAL, "National Degree Program"),
+        (JOINT, "Joint Degree Program"),
+    ]
+
     first_name = models.CharField(max_length=50, verbose_name="First Name")
     last_name = models.CharField(
         max_length=50, blank=True, null=True, verbose_name="Last Name")
@@ -136,6 +143,15 @@ class StudentData(models.Model):
         choices=SCHEDULE,
         verbose_name="Class Schedule"
     )
+    graduation_program = models.CharField(
+        max_length=3,
+        choices=GRADUATION,
+        verbose_name="Graduation Program",
+        blank=True,
+        null=True
+    )
+    registration_paid = models.BooleanField(
+        default=False, verbose_name="Registration Paid")
     register_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

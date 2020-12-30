@@ -4,8 +4,11 @@ from regform.models import StudentData
 
 # Register your models here.
 class DateAdmin(admin.ModelAdmin):
-    list_display = ('full_name', 'gender', 'email', 'study_program', 'schedule', 'register_date')
-    list_filter = ('study_program', 'gender')
+    list_display = ('full_name', 'study_program',
+                    'graduation_program', 'registration_paid', 'register_date')
+    list_filter = ('study_program', 'gender',
+                   'graduation_program', 'registration_paid')
+    list_editable = ('graduation_program', 'registration_paid')
     readonly_fields = ('register_date',)
     search_fields = ['first_name']
 
@@ -53,6 +56,8 @@ class DateAdmin(admin.ModelAdmin):
         ('Study Information', {'fields': [
             'study_program',
             'schedule',
+            'graduation_program',
+            'registration_paid',
         ]}),
     ]
 

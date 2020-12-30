@@ -2,6 +2,7 @@ from regform.forms import StudentForm
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.core.mail import send_mail
 
 
 # Create your views here.
@@ -21,7 +22,9 @@ def register(request):
             request.session['register-page'] = True
             form.save()
             # process the data in form.cleaned_data as required
-            # ...
+            # send_mail('Thanks for applying to IB IT&B', 'Test Success Message',
+            #           'computerclub.itnb@gmail.com',
+            #           ['randybrilliant68@gmail.com', 'junottheodore@gmail.com', 'valentinaaali72@gmail.com'])
             # redirect to a new URL:
             return HttpResponseRedirect(reverse('success-page'))
     # if a GET (or any other method) we'll create a blank form
