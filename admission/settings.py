@@ -84,12 +84,12 @@ WSGI_APPLICATION = 'admission.wsgi.application'
 
 DATABASES = {
     # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'studentData',
-    #     'USER': 'postgres',
-    #     'PASSWORD': '',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '5432',
+    #     'ENGINE': 'django.db.backends.mysql',
+    #    'NAME': 'myproject',
+    #    'USER': 'myprojectuser',
+    #    'PASSWORD': 'password',
+    #    'HOST': 'localhost',
+    #    'PORT': '',
     # }
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

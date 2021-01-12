@@ -1,16 +1,11 @@
+main {
+    font-family: "Kumbh Sans", sans-serif;
+}
+
 .asteriskField {
     color: red;
 }
 
 .header-logo {
     width: 150px;
-}
-
-@media(max-width: 768px) {
-    .navbar {
-        height: 60px;
-    }
-    .header-logo {
-        width: 120px;
-    }
 }

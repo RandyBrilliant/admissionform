@@ -1,16 +1,25 @@
 {% extends 'regform/base.html' %}
 {% load static %}
 
-{% block title %}IB IT&B | Admission Office{% endblock title %}
+{% block title %}IB IT&B | Admission Pathway{% endblock title %}
+
+{% block meta %}
+  <meta 
+    name="description" 
+    content="Welcome to the official Admission Pathway of Institut Bisnis IT&B. We are here to help you who wish in pursuing undergraduate studies at Medan, Indonesia."
+  />
+  <meta name="keywords" content="itnbcampus, hospitality, entrepreneurship, technopreneur"/>
+
+  <!-- Facebook Opengraph --> 
+  <meta property="og:url" content="http://admission.itnb.ac.id" />
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="IB IT&B Admission Office" />
+  <meta property="og:description" content="Welcome fellow students, We are the Education Consultant of IB IT&B. We are here to help you in pursuing your undergraduate studies at Medan, Indonesia." />
+  <meta property="og:image" content="http:staticumbo-v2.jpg"/>
+{% endblock meta %}
 
 {% block customcss %}
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
-    <!-- Custom CSS -->
-    <link href="{% static 'css/home/style.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/home/style.css' %}" rel="stylesheet" />
 {% endblock customcss %}
 
 {% block content %}
@@ -57,7 +66,7 @@
                     <h4>Business</h4>
                   </div>
 
-                  <h3><a href="https://www.itnb.ac.id/about-us/accounting" target="_blank">Accounting</a></h3>
+                  <h3><a href="https://www.itnb.ac.id/about-us/accounting">Accounting</a></h3>
                   <p>
                     Accounting opens countless employment in the business world.
                     In a broad sense, Accounting makes senses of numbers which
@@ -69,7 +78,6 @@
                     <a
                       href="https://www.itnb.ac.id/about-us/accounting"
                       class="btn btn-danger mt-3 btn-enroll"
-                      target="_blank"
                     >
                       Read More
                     </a>
@@ -92,7 +100,7 @@
                     <h4>Business</h4>
                   </div>
 
-                  <h3><a href="https://www.itnb.ac.id/about-us/management" target="_blank">Management</a></h3>
+                  <h3><a href="https://www.itnb.ac.id/about-us/management">Management</a></h3>
                   <p>
                     The Management Study Program provides a comprehensive basis
                     for a career in management while being flexible enough to
@@ -104,7 +112,6 @@
                     <a
                       href="https://www.itnb.ac.id/about-us/management"
                       class="btn btn-danger mt-3 btn-enroll"
-                      target="_blank"
                     >
                       Read More
                     </a>
@@ -127,7 +134,7 @@
                     <h4>Business</h4>
                   </div>
 
-                  <h3><a href="https://www.itnb.ac.id/about-us/entrepreneurship" target="_blank">Entrepreneurship</a></h3>
+                  <h3><a href="https://www.itnb.ac.id/about-us/entrepreneurship">Entrepreneurship</a></h3>
                   <p>
                     Entrepreneurs are not afraid to take risks, tackle
                     innovative solutions in order to boost their business
@@ -140,7 +147,6 @@
                     <a
                       href="https://www.itnb.ac.id/about-us/entrepreneurship"
                       class="btn btn-danger mt-3 btn-enroll"
-                      target="_blank"
                     >
                       Read More
                     </a>
@@ -163,7 +169,7 @@
                     <h4>Business</h4>
                   </div>
 
-                  <h3><a href="https://www.itnb.ac.id/about-us/international-trade" target="_blank">International Trade</a></h3>
+                  <h3><a href="https://www.itnb.ac.id/about-us/international-trade">International Trade</a></h3>
                   <p>
                     This program will analyze the causes and consequences of
                     international trade and investment. The program was built to
@@ -177,7 +183,6 @@
                     <a
                       href="https://www.itnb.ac.id/about-us/international-trade"
                       class="btn btn-danger mt-3 btn-enroll"
-                      target="_blank"
                     >
                       Read More
                     </a>
@@ -200,7 +205,7 @@
                     <h4>Technology</h4>
                   </div>
 
-                  <h3><a href="https://www.itnb.ac.id/about-us/information-system" target="_blank">Information System</a></h3>
+                  <h3><a href="https://www.itnb.ac.id/about-us/information-system">Information System</a></h3>
                   <p>
                     Information Systems Study program teaches the foundation of
                     science and application of Information Technology within an
@@ -213,7 +218,6 @@
                     <a
                       href="https://www.itnb.ac.id/about-us/information-system"
                       class="btn btn-danger mt-3 btn-enroll"
-                      target="_blank"
                     >
                       Read More
                     </a>
@@ -237,7 +241,7 @@
                   </div>
 
                   <h3>
-                    <a href="https://www.itnb.ac.id/about-us/hospitality-management" target="_blank">Hospitality Management</a>
+                    <a href="https://www.itnb.ac.id/about-us/hospitality-management">Hospitality Management</a>
                   </h3>
                   <p>
                     Our Hospitality Management program is an international
@@ -251,7 +255,6 @@
                     <a
                       href="https://www.itnb.ac.id/about-us/hospitality-management"
                       class="btn btn-danger mt-3 btn-enroll"
-                      target="_blank"
                     >
                       Read More
                     </a>
@@ -272,14 +275,14 @@
               <div class="content bg-danger shadow">
                 <h3>Why Studying at IB IT&B?</h3>
                 <p>
-                  There are a lot of opportunities that you will achieve by
+                  There are tons of opportunities that you will achieve by
                   studying at IB IT&B. We have been trusted by parents and
-                  students for 10 years in giving the best education to them.
+                  students for 15 years in giving the best education at Medan, Indonesia.
                 </p>
                 <div class="text-center">
-                  <a href="https://www.itnb.ac.id" class="more-btn" target="_blank"
-                    >Learn More <i class="bx bx-chevron-right"></i
-                  ></a>
+                  <a href="https://www.itnb.ac.id" class="more-btn">
+                    Learn More <i class="bx bx-chevron-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -302,11 +305,11 @@
                   <div class="col-xl-4 d-flex align-items-stretch">
                     <div class="icon-box mt-4 mt-xl-0 shadow">
                       <i class="bx bx-cube-alt"></i>
-                      <h4>Certification Profession</h4>
+                      <h4>Professional Certification</h4>
                       <p>
-                        We are working together with the government to provide
-                        you with the professional certification to level up your
-                        career.
+                        We are working with the government to provide
+                        you with the professional certification to jumpstart and level up your
+                        career in the future.
                       </p>
                     </div>
                   </div>
@@ -316,7 +319,7 @@
                       <h4>English-Speaking Environment</h4>
                       <p>
                         At here, we aim to guide you in an English-Speaking
-                        Environment in order to strengthn your english fluency.
+                        Environment in order to strengthen your english fluency.
                       </p>
                     </div>
                   </div>
@@ -380,7 +383,7 @@
               </ul>
               <p>
                 For more detailed procedure, please contact one of our Education
-                Consultant Staff for further instruction
+                Consultant Staff for further instruction.
               </p>
               <a href="{% url 'register-page' %}" class="btn btn-danger mt-3 btn-enroll">
                 Enroll Now
@@ -475,15 +478,15 @@
       <section id="trainers" class="trainers">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
-            <h2>Education Consultant</h2>
-            <h3>Our Education Consultant Staff</p>
+            <h2>Our Team</h2>
+            <h3>Education Consultant</p>
           </div>
 
           <div class="row" data-aos="zoom-in" data-aos-delay="100">
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div class="member shadow">
                 <img
-                  src="{% static 'img/home/valentina.jpg' %}"
+                  src="{% static 'img/home/randy-brilliant.jpg' %}"
                   class="img-fluid"
                   alt="Randy Brilliant"
                 />
@@ -491,17 +494,16 @@
                   <h4>Randy Brilliant</h4>
                   <span>Information System 2018</span>
                   <p>
-                    Magni qui quod omnis unde et eos fuga et exercitationem.
-                    Odio veritatis perspiciatis quaerat qui aut aut aut
+                    Programming is for everyone, I am always amaze of how these things could change the world.
                   </p>
                   <div class="social">
-                    <a href="http://line.me/ti/p/~randycb" target="_blank">
+                    <a href="http://line.me/ti/p/~randycb">
                       <i class="icofont-line"></i>
                     </a>
-                    <a href="https://www.instagram.com/randybrilliant" target="_blank">
+                    <a href="https://www.instagram.com/randybrilliant">
                       <i class="icofont-instagram"></i>
                     </a>
-                    <a href="https://wa.me/6288261306403" target="_blank">
+                    <a href="https://wa.me/6288261306403">
                       <i class="icofont-whatsapp"></i>
                     </a>
                   </div>
@@ -523,13 +525,13 @@
                     Don't limit yourself. Many people limit themselves to what they think they can do. You can go as far as your mine let's you. What you believe,remember,you can achieve.
                   </p>
                   <div class="social">
-                    <a href="http://line.me/ti/p/~valentinaali72" target="_blank">
+                    <a href="http://line.me/ti/p/~valentinaali72">
                       <i class="icofont-line"></i>
                     </a>
-                    <a href="https://www.instagram.com/va_rene01" target="_blank">
+                    <a href="https://www.instagram.com/va_rene01">
                       <i class="icofont-instagram"></i>
                     </a>
-                    <a href="https://wa.me/6281397735730" target="_blank">
+                    <a href="https://wa.me/6281397735730">
                       <i class="icofont-whatsapp"></i>
                     </a>
                   </div>
@@ -551,13 +553,13 @@
                     One Day or Day One, you decide.
                   </p>
                   <div class="social">
-                    <a href="http://line.me/ti/p/~neshaaaa" target="_blank">
+                    <a href="http://line.me/ti/p/~neshaaaa">
                       <i class="icofont-line"></i>
                     </a>
-                    <a href="https://www.instagram.com/vaneshavionelli" target="_blank">
+                    <a href="https://www.instagram.com/vaneshavionelli">
                       <i class="icofont-instagram"></i>
                     </a>
-                    <a href="https://wa.me/6281321954878" target="_blank">
+                    <a href="https://wa.me/6281321954878">
                       <i class="icofont-whatsapp"></i>
                     </a>
                   </div>
@@ -580,13 +582,13 @@
                     consequuntur qui porro et laborum toro des clara
                   </p>
                   <div class="social">
-                    <a href="http://line.me/ti/p/~neshaaaa" target="_blank">
+                    <a href="http://line.me/ti/p/~neshaaaa">
                       <i class="icofont-line"></i>
                     </a>
-                    <a href="https://www.instagram.com/vaneshavionelli" target="_blank">
+                    <a href="https://www.instagram.com/vaneshavionelli">
                       <i class="icofont-instagram"></i>
                     </a>
-                    <a href="https://wa.me/6281321954878" target="_blank">
+                    <a href="https://wa.me/6281321954878">
                       <i class="icofont-whatsapp"></i>
                     </a>
                   </div>
@@ -600,8 +602,3 @@
     </main>
     <!-- End Main Section -->
 {% endblock content %}
-
-{% block customjs %}
-    <!-- Custom JS -->
-    <script src="{% static 'js/home/main.js' %}"></script>
-{% endblock customjs %}

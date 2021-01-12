@@ -4,21 +4,13 @@
 {% block title %}IB IT&B | Admission Successful{% endblock title %}
 
 {% block customcss %}
-    <link rel="stylesheet" href="{% static 'css/regform/register.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/success/success.css' %}" type="text/css" />
 {% endblock customcss %}
 
 {% block content %}
-    <header>
-      <nav class="navbar navbar-dark bg-danger">
-        <div class="container">
-          <a class="navbar-brand mx-auto" href="https://www.itnb.ac.id">
-            <img src="{% static 'img/Logo IB IT&B Putih.png' %}" alt="IB IT&B" class="header-logo">
-          </a>
-        </div>
-      </nav>
-    </header>
-    <main>
-        <div class="alert alert-success container mt-5" role="alert">
+    <section id="hero">
+      <div class="container">
+        <div class="alert alert-success mt-5" role="alert">
           <h4 class="alert-heading fw-bold">Congratulations!</h4>
           <p>You are one step ahead to be one of our future students! we will review your application form shortly. In the meantime,
               please contact one of our Education Consultant Staff to seek for further instructions. In 3 days time, you will receive
@@ -35,6 +27,57 @@
               </figcaption>
           </figure>
         </div>
+      </div>   
+    </section>
+
+    <div class="container d-flex justify-content-center align-items-center my-5">
+      <a href="http://itnb.ac.id" class="btn btn-success btn-lg btn-redirect m-3">Go To Main Sites</a>
+      <a href="{% url 'index' %}" class="btn btn-danger btn-lg btn-redirect m-3">Go To Admission Pathway</a>
+    </div>
+
+    <main id="main">
+      
+      <section class="container mt-5 mb-5">
+        <h4 class="fw-bolder text-center mb-5">Frequently Asked Question</h4>
+        <div class="accordion accordion-flush" id="student-faq">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq-1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="false" aria-controls="faq-collapse-1">
+                <strong>Will there be any assessment test for the new intake students?</strong>
+              </button>
+            </h2>
+            <div id="faq-collapse-1" class="accordion-collapse collapse show" aria-labelledby="faq-1" data-bs-parent="#student-faq">
+              <div class="accordion-body">
+                Yes, there will be assessment test which will be held at the schedule stated to you after you have registered. The test will be conducted online and for the details and information will be delivered to you once you have been accepted as on of our students.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq-2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">
+                <strong>When will the school start?</strong>
+              </button>
+            </h2>
+            <div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-2" data-bs-parent="#student-faq">
+              <div class="accordion-body">
+                For the new intake 2021, the semester will start at this September 6, 2021.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq-3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-3">
+                <strong>Will there be any chances for us to be recruited after we have graduated?</strong>
+              </button>
+            </h2>
+            <div id="faq-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-3" data-bs-parent="#student-faq">
+              <div class="accordion-body">
+                80% of our alumni was accepted to work at multi-national companies, we have open the opportunity for you to work there.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
 {% endblock content %}

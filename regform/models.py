@@ -3,6 +3,26 @@ from django_countries.fields import CountryField
 
 
 # Create your models here.
+class StudyProgram(models.Model):
+    BUSINESS = "BA"
+    TECHNOLOGY = "TI"
+    HOTEL = "HM"
+    TYPE = [
+        (BUSINESS, 'Business'),
+        (TECHNOLOGY, 'Technology'),
+        (HOTEL, 'Hotel Management'),
+    ]
+
+    major = models.CharField(max_length=30)
+    description = models.TextField()
+    category = models.CharField(
+        max_length=2,
+        choices=TYPE,
+    )
+    image = models.ImageField(default="default.jpg", upload_to="major_pics")
+
+    def __str__(self):
+        return self.major
 
 
 class StudentData(models.Model):
@@ -34,21 +54,6 @@ class StudentData(models.Model):
     MORTALITY = [
         (ALIVE, "Alive"),
         (DEATH, "Deceased"),
-    ]
-
-    ACCOUNTING = "ACC"
-    ENTREPRENEURSHIP = "ENT"
-    HOSPITALITY = "HOS"
-    INTERNATIONALTRADE = "INT"
-    INFORMATIONSYSTEM = "INF"
-    MANAGEMENT = "MGM"
-    STUDYPROGRAM = [
-        (ACCOUNTING, "Accounting"),
-        (ENTREPRENEURSHIP, "Entrepreneurship"),
-        (HOSPITALITY, "Hospitality Management"),
-        (INTERNATIONALTRADE, "International Trade"),
-        (INFORMATIONSYSTEM, "Information System"),
-        (MANAGEMENT, "Management"),
     ]
 
     NOON = "NO"
@@ -133,11 +138,8 @@ class StudentData(models.Model):
     )
     guardian_address = models.TextField(
         blank=True, null=True, verbose_name="Guardian's Address")
-    study_program = models.CharField(
-        max_length=3,
-        choices=STUDYPROGRAM,
-        verbose_name="Study Program"
-    )
+    study_program = models.ForeignKey(
+        StudyProgram, on_delete=models.CASCADE, verbose_name="Study Program")
     schedule = models.CharField(
         max_length=2,
         choices=SCHEDULE,

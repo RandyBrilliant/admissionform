@@ -1,5 +1,5 @@
 from django.contrib import admin
-from regform.models import StudentData
+from regform.models import StudentData, StudyProgram
 
 
 # Register your models here.
@@ -66,3 +66,4 @@ class DateAdmin(admin.ModelAdmin):
 
 
 admin.site.register(StudentData, DateAdmin)
+admin.site.register(StudyProgram)
